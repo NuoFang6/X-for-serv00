@@ -24,7 +24,7 @@ function getFourthLine(filename, callback) {
 }
 
 app.get("/", function (req, res) {
-  res.send("hello world");
+  res.send("0");
 });
 
 // 设置路由
