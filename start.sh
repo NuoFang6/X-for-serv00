@@ -13,8 +13,8 @@ export ARGO_AUTH=eyJhIjoiZmJhNzQyOGI2OWRiNTdhOTMwODNhMmNhNzUxZWUwMzIiLCJ0IjoiN2N
 export ARGO_DOMAIN=vps.nuofang.filegear-sg.me
 
 # 网页的用户名和密码（可不填，默认为 admin 和 password ，如果不填请删掉这两行）
-export WEB_USERNAME=nuofang
-export WEB_PASSWORD=zhu991921514
+export WEB_USERNAME=
+export WEB_PASSWORD=
 
 # 启动程序
 USERNAME=$(whoami)
