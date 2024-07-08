@@ -55,10 +55,10 @@ generate_config() {
             "tag": "WARP",
             "protocol": "wireguard",
             "settings": {
-                "secretKey": "aAICpNZXdhCiPsHWt2ef691r82MLU71c4222ltz070E=",
+                "secretKey": "YFYOAdbw1bKTHlNNi+aEjBM3BO7unuFC5rOkMRAz9XY=",
                 "address": [
                     "172.16.0.2/32",
-                    "2606:4700:110:8705:f6c9:7306:18c1:fcaa/128"
+                    "2606:4700:110:8a36:df92:102a:9602:fa18/128"
                 ],
                 "peers": [
                     {
@@ -148,7 +148,7 @@ EOF
 }
 
 export_list() {
-  VMESS="{ \"v\": \"2\", \"ps\": \"Argo-NuoFang6-Vmess\", \"add\": \"alejandracaiccedo.com\", \"port\": \"443\", \"id\": \"${UUID}\", \"aid\": \"0\", \"scy\": \"none\", \"net\": \"ws\", \"type\": \"none\", \"host\": \"\${ARGO_DOMAIN}\", \"path\": \"/${WSPATH}-vmess?ed=2048\", \"tls\": \"tls\", \"sni\": \"\${ARGO_DOMAIN}\", \"alpn\": \"\" }"
+  VMESS="{ \"v\": \"2\", \"ps\": \"Argo-k0baya-Vmess\", \"add\": \"alejandracaiccedo.com\", \"port\": \"443\", \"id\": \"${UUID}\", \"aid\": \"0\", \"scy\": \"none\", \"net\": \"ws\", \"type\": \"none\", \"host\": \"\${ARGO_DOMAIN}\", \"path\": \"/${WSPATH}-vmess?ed=2048\", \"tls\": \"tls\", \"sni\": \"\${ARGO_DOMAIN}\", \"alpn\": \"\" }"
   cat > list << EOF
 *******************************************
 V2-rayN:
@@ -156,11 +156,11 @@ V2-rayN:
 vmess://\$(echo -n \${VMESS} | base64 | tr -d '\n')
 小火箭:
 ----------------------------
-vmess://$(echo -n "none:${UUID}@alejandracaiccedo.com:443" | base64 | tr -d '\n')?remarks=Argo-NuoFang6-Vmess&obfsParam=\${ARGO_DOMAIN}&path=/${WSPATH}-vmess?ed=2048&obfs=websocket&tls=1&peer=\${ARGO_DOMAIN}&alterId=0
+vmess://$(echo -n "none:${UUID}@alejandracaiccedo.com:443" | base64 | tr -d '\n')?remarks=Argo-k0baya-Vmess&obfsParam=\${ARGO_DOMAIN}&path=/${WSPATH}-vmess?ed=2048&obfs=websocket&tls=1&peer=\${ARGO_DOMAIN}&alterId=0
 *******************************************
 Clash:
 ----------------------------
-- {name: Argo-NuoFang6-Vmess, type: vmess, server: alejandracaiccedo.com, port: 443, uuid: ${UUID}, alterId: 0, cipher: none, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /${WSPATH}-vmess?ed=2048, headers: {Host: \${ARGO_DOMAIN}}}, udp: true}
+- {name: Argo-k0baya-Vmess, type: vmess, server: alejandracaiccedo.com, port: 443, uuid: ${UUID}, alterId: 0, cipher: none, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /${WSPATH}-vmess?ed=2048, headers: {Host: \${ARGO_DOMAIN}}}, udp: true}
 *******************************************
 EOF
   cat list
