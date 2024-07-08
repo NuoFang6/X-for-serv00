@@ -67,9 +67,10 @@ generate_config() {
                             "0.0.0.0/0",
                             "::/0"
                         ],
-                        "endpoint": "engage.cloudflareclient.com:2408"
+                        "endpoint": "162.159.193.10:2408"
                     }
                 ],
+                "reserved": [78, 135, 76],
                 "mtu": 1280
             }
         }
